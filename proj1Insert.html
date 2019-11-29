@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <script src="proj1insere.js"></script> -->
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <title>CHAT</title>
+  </head>
+  <body>
+    <!-- <form action="https://api-all2.azurewebsites.net/api/lanche" method="POST" enctype='application/json'>
+    <label>Nome:</label>
+    <input name ='nome' type="text">
+    <label>Descrição:</label>
+    <input name ='descricao' type="text">
+    <label>Preço</label>
+    <input name ='preco' type="text">
+    <input type="submit" value="Enviar"> -->
+    <!-- </form> -->
+
+
+    <script>
+      const toSend = {
+        
+        nome: "Gustavo",
+        descricao: "Lanche",
+        preco: 10,
+        imagemUrl:""
+  
+      }
+
+      const jsonString = JSON.stringify(toSend)
+      // console.log(jsonString);
+      // const hrx = new XMLHttpRequest();
+
+      // hrx.open("POST", "https://api-all2.azurewebsites.net/api/lanche" , true )
+      // hrx.
+      // hrx.send(jsonString)
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("POST", "https://api-all2.azurewebsites.net/api/lanche", false);
+      ajax.setRequestHeader('Content-Type' , 'application/json')
+      ajax.send();
+
+
+      
+    
+    </script>
+  </body>
+</html>
